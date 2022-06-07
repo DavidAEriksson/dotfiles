@@ -6,6 +6,7 @@ export PATH="$PATH:/usr/local/go/bin"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export GOPATH=$GOPATH:/Users/david.eriksson/Development/godev
+export PATH=$PATH:$(go env GOPATH)/bin
 
 ZSH_THEME="cloud"
 
@@ -49,6 +50,10 @@ alias godev="cd ~/Development/godev"
 
 alias luamake=/Users/david.eriksson/.config/nvim/lua-language-server/3rd/luamake/luamake
 
+alias gb="go build"
+alias grm="go run main.go"
+alias air="~/.air"
+
 _-accept-line () {
     emulate -L zsh
     local -a WORDS
@@ -63,3 +68,5 @@ _-accept-line () {
     zle .accept-line
 }
 zle -N accept-line _-accept-line
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
